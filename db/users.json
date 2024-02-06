@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "65c287efde7fee2c7caf7c24"
+  },
+  "email": "www.ahmed@gmail.com",
+  "password": "12345",
+  "image": "\\upload\\Tue Feb 06 2024istockphoto-1476709810-612x612.jpg",
+  "__v": 0,
+  "address": "Cairo",
+  "contact": 1064907346,
+  "userName": "Ahmed Elmasry"
+}]

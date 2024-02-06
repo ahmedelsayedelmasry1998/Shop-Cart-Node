@@ -1,0 +1,204 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body{
+  background-color: #e9edc9;
+}
+.indexPage{
+  margin-top: 5%;
+}
+.indexPage .content-component{
+  margin-bottom: 5%;
+}
+.indexPage .content-component img{
+height: 250px;
+}
+.indexPage .content-component div.actions{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.indexPage .content-component div.actions .price{
+  font-weight: bold;
+  color: green;
+}
+.card-title{
+  font-size: 25px;
+  font-weight: bolder;
+  color: brown;
+}
+.card-text{
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(67, 61, 54);
+}
+.navbar-brand{
+  color: white !important;
+  padding-left: 1.5% !important;
+}
+.nav-link{
+  color: white !important;
+}
+.active{
+  color: yellow !important;
+  font-weight: 400;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 67px !important;
+}
+.dropdown-toggle::after {
+  border-top: 0px !important;
+  border-right: 0px !important;
+  border-bottom: 0;
+  border-left: 0px !important;
+}
+.formContent{
+  width: 50%;
+  margin: 13% auto;
+}
+
+.shopCartContainer{
+  width: 100%;
+  overflow-x: auto;
+  padding-top: 3%;
+}
+.shopCartContainer h1{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: green;
+  padding-bottom: 1.5%;
+  font-weight: bold;
+}
+table{
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+table tbody tr.totalPrice {
+font-weight: bold;
+color: gray !important;
+}
+.shopCartContainer table tbody tr td.totalQuantaity div{
+ display: inline-block;
+ width: 30%;
+}
+.contents{
+  width: 50%;
+  margin: 0px auto;
+}
+.text-success-custom{
+  padding-top: 30px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  color: blueviolet;
+}
+.error{
+  text-align: center;
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 22.5%;
+}
+.main{
+  color: black !important;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+.active{
+  color:rgb(76, 237, 76) !important;
+}
+.tabColor{
+  color: black !important;
+}
+.tabOne {
+  width: 70%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 19px;
+  justify-content: space-around;
+}
+.tabOne div{
+  width: calc(100% / 2);
+}
+.d-none{
+  display: none;
+}
+
+.formUser{
+  margin-bottom: 3%;
+  width: 50%;
+  margin-top: 1.5%;
+}
+.btn-action{
+  margin-top: 2%;
+}
+.errorProfile{
+  color: red;
+  font-weight: 500;
+}
+/*Responsive signin Page*/
+.indexPage{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.indexPage .content-component{
+  width: calc(91% / 3);
+  margin-left: 3%;
+}
+@media (max-width : 995px)
+{
+  .indexPage{
+   flex-direction: column;
+   align-items: center;
+  }
+  .indexPage .content-component{
+    text-align: center;
+    width: 70% !important;
+  }
+}
+@media (max-width : 995px)
+{
+  .indexPage{
+   flex-direction: column;
+   align-items: center;
+  }
+  .indexPage .content-component{
+    text-align: center;
+    width: 100% !important;
+  }
+}
+/*Responsive signin Page*/
+/*Responsive signin Page*/
+@media (max-width : 1000px)
+{
+  .contents{
+    width: 80%;
+  }
+}
+@media (max-width : 425px)
+{
+  .contents{
+    width: 100% !important;
+  }
+}
+/*Responsive checkout Page*/
+.userContainer{
+  padding-top: 5%;
+}
+.right{
+  padding-left: 15%;
+}
+.left {
+  text-align: center;
+}
+#actionButton{
+padding-top: 5%;
+}
+
+

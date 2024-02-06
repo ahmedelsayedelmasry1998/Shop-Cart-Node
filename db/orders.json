@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "65c289e2de7fee2c7caf7c48"
+  },
+  "user": {
+    "$oid": "65c287efde7fee2c7caf7c24"
+  },
+  "cart": {
+    "_id": "65c287efde7fee2c7caf7c24",
+    "totalQuantity": 4,
+    "totalPrice": 965,
+    "selectedProduct": [
+      {
+        "_id": "65af6cf82da85ad8ed46490e",
+        "name": "NOKIA",
+        "price": 500,
+        "quantity": 1
+      },
+      {
+        "_id": "65af6cf82da85ad8ed464906",
+        "name": "HUWAWI X9",
+        "price": 300,
+        "quantity": 2
+      },
+      {
+        "_id": "65af6cf82da85ad8ed464908",
+        "name": "LAPTOP Y9",
+        "price": 165,
+        "quantity": 1
+      }
+    ],
+    "createAt": {
+      "$date": "2024-02-06T19:34:04.814Z"
+    },
+    "__v": 0
+  },
+  "address": "Cairo",
+  "name": "Ahmed Elmasry",
+  "contact": "1064907346",
+  "orderPrice": "965",
+  "__v": 0
+}]

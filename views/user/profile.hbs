@@ -1,0 +1,183 @@
+<input type="hidden" name="" value="{{hasMessageError}}" id="hasMessageError">
+<div class="userContainer">
+    <div class="row">
+        <div class="col-md-3 left">
+            <h3>{{user.userName}}</h3>
+            <img id="image" src="{{user.image}}" width="200px" height="285px" class="rounded mx-auto d-block"
+                alt="Avatar Photo ...">
+            <form enctype="multipart/form-data" action="/uploadFile" method="post">
+                <input style="margin: 20px 0px 20px 30px" type="file" name="myfile" id="file">
+                <div id="actionButton" class="d-none">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                    <a class="btn btn-warning" href="/users/profile">Cancel</a>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-9 right">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="main nav-link tabColor active" id="home-tab" data-bs-toggle="tab"
+                        data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                        aria-selected="true">Home</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="main nav-link tabColor" id="profile-tab" data-bs-toggle="tab"
+                        data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+                        aria-selected="false">Order</button>
+                </li>
+            </ul>
+            <div class="mainTab tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                    tabindex="0">
+                    <div id="home" class="tabOne">
+                        <div>
+                            <p>User Name : </p>
+                        </div>
+                        <div>
+                            {{#if user.userName}}
+                            <p>{{user.userName}}</p>
+                            {{else}}
+                            <p class="errorProfile">Please Update Your Information</p>
+                            {{/if}}
+                        </div>
+                        <div>
+                            <p>Email : </p>
+                        </div>
+                        <div>
+                            <p>{{user.email}}</p>
+                        </div>
+                        <div>
+                            <p>Contact : </p>
+                        </div>
+                        <div>
+                            {{#if user.contact}}
+                            <p>{{user.contact}}</p>
+                            {{else}}
+                            <p class="errorProfile">Please Update Your Information</p>
+                            {{/if}}
+                        </div>
+                        <div>
+                            <p>Address : </p>
+                        </div>
+                        <div>
+                            {{#if user.address}}
+                            <p>{{user.address}}</p>
+                            {{else}}
+                            <p class="errorProfile">Please Update Your Information</p>
+                            {{/if}}
+                        </div>
+                        <div>
+                            <p>Password : </p>
+                        </div>
+                        <div>
+                            <p>{{user.password}}</p>
+                        </div>
+                    </div>
+                    <div class="formUser d-none" id="formUpdate">
+                        {{#each profileErrors}}
+                        <div class="alert alert-danger">
+                            {{this}}
+                        </div>
+                        {{/each}}
+                        <form action="/users/updateUser" method="post">
+                            <div>
+                                <label for="exampleFormControlInput1" class="form-label">User Name : </label>
+                                <input name="username" type="text" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Please Enter Your User Name ....">
+                            </div>
+                            <div>
+                                <label for="exampleFormControlInput2" class="form-label">Email : </label>
+                                <input name="email" type="email" class="form-control" id="exampleFormControlInput2"
+                                    placeholder="Please Enter Your User Email ....">
+                            </div>
+                            <div>
+                                <label for="exampleFormControlInput3" class="form-label">Contact : </label>
+                                <input name="contact" type="phone" class="form-control" id="exampleFormControlInput3"
+                                    placeholder="Please Enter Your User Contact ....">
+                            </div>
+                            <div>
+                                <label for="exampleFormControlInput4" class="form-label">Address : </label>
+                                <input name="address" type="text" class="form-control" id="exampleFormControlInput4"
+                                    placeholder="Please Enter Your User Address ....">
+                            </div>
+                            <div>
+                                <label for="exampleFormControlInput5" class="form-label">Password : </label>
+                                <input name="password" type="password" class="form-control"
+                                    id="exampleFormControlInput5" placeholder="Please Enter Your User Password ....">
+                            </div>
+                            <div>
+                                <label for="exampleFormControlInput6" class="form-label">Confirm Password : </label>
+                                <input name="confirmPassword" type="password" class="form-control"
+                                    id="exampleFormControlInput6"
+                                    placeholder="Please Enter Your User Confirm Password ....">
+                            </div>
+                            <div class="btn-action">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                                <a href="/users/profile" class="btn btn-danger">Cancel</a>
+                            </div>
+                        </form>
+                    </div>
+                    <a id="btnUpdate" class="btn btn-success" href="#">Update Data</a>
+                </div>
+                <div class="mainTab tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                    tabindex="0">
+                    <div class="shopCartContainer">
+                        {{#each userOrder as |val index| }}
+                        <table class="table table-success table-striped">
+                            <thead>
+                                <tr class="text-center totalPrice">
+                                    <td colspan="4">Order Namber Is : {{addOne @index}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Product Name</th>
+                                    <th scope="col">Product Quantity</th>
+                                    <th scope="col">Product Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each this.cart.selectedProduct as |val indexProduct|}}
+                                <tr>
+                                    <th scope="row">{{addOne @indexProduct}}</th>
+                                    <td>{{val.name}}</td>
+                                    <td>{{val.quantity}}</td>
+                                    <td>{{val.price}}</td>
+                                </tr>
+                                {{/each}}
+                                <tr class="totalPrice">
+                                    <td colspan="3">Total Price : </td>
+                                    <td colspan="1">{{this.orderPrice}} L.E</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        {{/each}}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    if (document.getElementById('hasMessageError').value === "true") {
+        document.getElementById('home').classList.add('d-none');
+        document.getElementById('formUpdate').classList.remove('d-none');
+        document.getElementById('btnUpdate').classList.add('d-none');
+    }
+    document.getElementById("file").onchange = function () {
+        const reader = new FileReader();
+        reader.readAsDataURL(this.files[0]);
+        reader.onload = function () {
+            document.getElementById('image').src = this.result;
+        }
+        this.classList.add('d-none');
+        document.getElementById('actionButton').classList.remove('d-none');
+    }
+    document.getElementById('btnUpdate').onclick = function () {
+        document.getElementById('home').classList.add('d-none');
+        document.getElementById('formUpdate').classList.remove('d-none');
+        this.classList.add('d-none')
+    }
+</script>

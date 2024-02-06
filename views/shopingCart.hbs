@@ -1,0 +1,47 @@
+<div class="shopCartContainer">
+    <h1>Shoping Cart</h1>
+    <div class="tableCart">
+        <table class="table table-light table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#ID</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Product Quantity</th>
+                    <th scope="col">Product Price</th>
+                    <th scope="col">Delete Product</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each cart}}
+                {{#each this.selectedProduct as |val index|}}
+                <tr>
+                    <th scope="row">{{addOne @index}}</th>
+                    <td>{{val.name}}</td>
+                    <td class="totalQuantaity">
+                        {{#if (checkQuantity @ val.quantity)}}
+                        <div><a style="color:red;pointer-events: none;cursor: default;" href="#"><i
+                                    class="fa-solid fa-minus"></i></a>
+                        </div>
+                        {{else}}
+                        <div><a class="" href="/decreaseProduct/{{index}}"><i class="fa-solid fa-minus"></i></a></div>
+                        {{/if}}
+                        <div>{{val.quantity}}</div>
+
+                        <div><a class="" href="/increaseProduct/{{index}}"><i class="fa-solid fa-plus"></i></a></div>
+                    </td>
+                    <td>{{val.price}} L.E</td>
+                    <td><a class="btn btn-danger" href="/deleteProduct/{{index}}">Delete <i
+                                class="fa-solid fa-trash"></i></a>
+                    </td>
+                </tr>
+                {{/each}}
+                <tr class="totalPrice">
+                    <td colspan="4">Total Price : </td>
+                    <td colspan="1">{{this.totalPrice}} L.E</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <a href="/checkout" class="btn btn-primary">Checkout</a>
+    </div>
+</div>

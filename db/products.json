@@ -1,0 +1,108 @@
+[{
+  "_id": {
+    "$oid": "65af6cf82da85ad8ed46490e"
+  },
+  "imagePath": "./images/product6.jpg",
+  "productName": "NOKIA",
+  "information": {
+    "storageCapacity": "31 GB",
+    "numberOfSim": "DUAL SIM",
+    "realComaraResaluation": "99 MB",
+    "dualSize": "4.5 INCH",
+    "_id": {
+      "$oid": "65af6cf82da85ad8ed46490f"
+    }
+  },
+  "price": 500,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65af6cf82da85ad8ed464906"
+  },
+  "imagePath": "./images/product2.jpg",
+  "productName": "HUWAWI X9",
+  "information": {
+    "storageCapacity": "15 GB",
+    "numberOfSim": "DUAL SIM",
+    "realComaraResaluation": "22 MB",
+    "dualSize": "8.5 INCH",
+    "_id": {
+      "$oid": "65af6cf82da85ad8ed464907"
+    }
+  },
+  "price": 150,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65af6cf82da85ad8ed464908"
+  },
+  "imagePath": "./images/product3.jpg",
+  "productName": "LAPTOP Y9",
+  "information": {
+    "storageCapacity": "65 GB",
+    "numberOfSim": "DUAL SIM",
+    "realComaraResaluation": "44 MB",
+    "dualSize": "5 INCH",
+    "_id": {
+      "$oid": "65af6cf82da85ad8ed464909"
+    }
+  },
+  "price": 165,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65af6cf82da85ad8ed46490c"
+  },
+  "imagePath": "./images/product5.jpg",
+  "productName": "MOBILE M9",
+  "information": {
+    "storageCapacity": "98 GB",
+    "numberOfSim": "DUAL SIM",
+    "realComaraResaluation": "11 MB",
+    "dualSize": "3.5 INCH",
+    "_id": {
+      "$oid": "65af6cf82da85ad8ed46490d"
+    }
+  },
+  "price": 550,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65af6cf82da85ad8ed464904"
+  },
+  "imagePath": "./images/product1.jpg",
+  "productName": "HUWAWAI Y9",
+  "information": {
+    "storageCapacity": "64 GB",
+    "numberOfSim": "DUAL SIM",
+    "realComaraResaluation": "16 MB",
+    "dualSize": "6.5 INCH",
+    "_id": {
+      "$oid": "65af6cf82da85ad8ed464905"
+    }
+  },
+  "price": 120,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65af6cf82da85ad8ed46490a"
+  },
+  "imagePath": "./images/product4.jpg",
+  "productName": "MOBILE Y9",
+  "information": {
+    "storageCapacity": "57 GB",
+    "numberOfSim": "DUAL SIM",
+    "realComaraResaluation": "66 MB",
+    "dualSize": "2.5 INCH",
+    "_id": {
+      "$oid": "65af6cf82da85ad8ed46490b"
+    }
+  },
+  "price": 250,
+  "__v": 0
+}]
